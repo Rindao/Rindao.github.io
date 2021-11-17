@@ -12,7 +12,9 @@ header li{
     float: left;
     padding-right: 30px;
 }
-
+footer{
+    margin-top: 80px;
+}
 footer img{
     height: 50px;
 }
