@@ -15,6 +15,13 @@ header li{
     margin-left: 30px;
     padding-right: 30px;
 }
+
+.contents{
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 100px;
+}
+
 footer{
     margin-top: 80px;
 }
