@@ -1,41 +1,104 @@
+body{
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: grid;
+    grid-template:
+    " ...... ...... ...... ...... ...... ...... " 0px
+    " header header header header header header " 80px
+    " ...... ...... ...... ...... ...... ...... " 10px
+    " ...... left   center right  right  ...... " 1fr
+    " ...... ...... ...... ...... ...... ...... " 10px
+    " footer footer footer footer footer footer " 90px
+    " ...... ...... ...... ...... ...... ...... " 50px
+    /  50px 50px 1fr 30px 290px 100px;
+    background-image:  url(img/background.jpg);
+}
 header{
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-bottom: 100px;
-    
+    grid-area: header;
+    background-color:rgba(255, 255, 255, 0.5);
+   
 }
-.logo{
+header img{
+    margin-left: 20px;
     height: 80px;
-    padding-top: 20px;
+    float:left;
+}
+header ul {
+    padding-left: 0px;
+    float: right;
+    list-style: none;
+}
+header li {
     float: left;
-       
+    padding-right: 20px;
+    line-height: 40px;
+    color: black;
 }
-
-header li{
-    margin-left: 0px;
-    padding-right: 0px;
-    float:left; 
-}
-
-.contents{
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-bottom: 100px;
-}
-
-.whatIsStellar{
-    font-size: large;
-}
-
-
-footer{
+/* header h2{
     text-align: center;
-    margin-bottom: 80px;
+    line-height: 40px;
+    color: black;
+} */
+main{
+    background-color:rgba(255, 255, 255, 0.5);
+    grid-area: center;
+    background-position-y: 60px;
+    background-image: url(img/frame.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+main h2{
+    padding-left: 30px;
+}
+main p {
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+main button{
+    float: right;
+    margin-top: 20px;
+}
+/* nav{
+    grid-area: left;
+    font-size: 100%;
+} */
+/* nav ul {
+    list-style: none;
+    padding: 0;
+} */
+aside{
+    grid-area: right;
+    background-color:rgba(255, 255, 255, 0.5);
+}
+aside img {
+    margin-top: 40px;
+    width: 100%;
+}
+footer{
+    grid-area: footer;
+    font-size: 60%;
+    text-align: center;
+    background-color:rgba(255, 255, 255, 0.5);
+    padding-top: 10px;
+}
+footer p {
+    margin: 0 auto;
+}
+footer img {
+    width: 20%;
+    margin: 0 auto;
 }
 
-footer img{
-    height: 30px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+@media screen and (max-width: 900px){
+        body{
+            grid-template: 
+                "header" 80px
+                "......"
+                "center" 1fr
+                "left  "
+                "right "
+                "footer" 100px;
+        }
 }
